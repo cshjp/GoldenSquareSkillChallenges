@@ -1,4 +1,4 @@
-require 'personaldiary'
+require 'make_snippet'
 
 RSpec.describe 'returns string unless its longer than 5 words then adds a ...' do
   it 'returns a an empty string when given' do
