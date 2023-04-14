@@ -9,7 +9,7 @@
 _Include the name of the method, its parameters, return value, and side effects._
 
 ```ruby
-has_todo = check_for_TODO(text)
+has_todo = check_for_todo(text)
 
 # text is a string
 # has_todo is a boolean
