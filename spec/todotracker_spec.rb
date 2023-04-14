@@ -38,4 +38,21 @@ describe TodoTracker do
       end
     end
   end
+  describe "#remove_from_list" do
+    context "when given multiple entries" do
+      it "removes the completed todo" do
+        todos = TodoTracker.new
+        todos.add("get milk")
+        todos.add("collect shopping")
+        todos.remove_from_list("collect shopping")
+        expect(todos.see_list).to eq "Todo: get milk"
+      end
+      it "fails if no match" do
+        todos = TodoTracker.new
+        todos.add("get milk")
+        todos.add("collect shopping")
+        expect{ todos.remove_from_list("collect") }.to raise_error "Couldn't find within current Todos"
+      end
+    end
+  end
 end
