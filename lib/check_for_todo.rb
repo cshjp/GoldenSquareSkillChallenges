@@ -5,4 +5,5 @@ def check_for_todo(text)
   else 
     false
   end
+  # checks for todo
 end
